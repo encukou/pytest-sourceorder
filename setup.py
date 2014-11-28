@@ -18,7 +18,7 @@ setup_args = dict(
     license = "GPL",
     author = "Petr Viktorin",
     author_email = "pviktori@redhat.com",
-    packages = ["pytest_sourceorder"],
+    py_modules = ["pytest_sourceorder"],
     classifiers=[
         'Development Status :: 4 - Beta',
         'License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)',

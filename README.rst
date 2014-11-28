@@ -26,7 +26,8 @@ might cause the plugin to order them wrong.
 
 When inheriting from an ordered test class, the superclass' methods will be
 run first (even if overridden), followed by the ones from subclasses.
-Do not apply an additional ``@ordered`` decorator to subclasses.
+You generally do *not* want to apply an additional ``@ordered`` decorator
+to the subclasses – doing so will reset the inheritance-based ordering.
 
 
 Contributing
