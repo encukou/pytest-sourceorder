@@ -12,7 +12,7 @@
 
 %global srcname pytest-sourceorder
 %global modulename pytest_sourceorder
-%global srcversion 0.3
+%global srcversion 0.1
 %global versionedname %{srcname}-%{srcversion}
 
 Name: python-%{srcname}
@@ -100,14 +100,15 @@ popd
 %doc COPYING
 %doc README.rst
 %{python_sitelib}/%{modulename}-%{version}-py2.?.egg-info
-%{python_sitelib}/%{modulename}/
+%{python_sitelib}/%{modulename}.py*
 
 %if 0%{?with_python3}
 %files -n python3-%{srcname}
 %doc COPYING
 %doc README.rst
 %{python3_sitelib}/%{modulename}-%{version}-py%{python3_version}.egg-info
-%{python3_sitelib}/%{modulename}/
+%{python3_sitelib}/%{modulename}.py
+%{python3_sitelib}/__pycache__/%{modulename}.cpython-3?.py*
 %endif
 
 

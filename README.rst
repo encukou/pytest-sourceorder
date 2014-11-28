@@ -45,8 +45,8 @@ Developer links
 ---------------
 
   * Bug tracker: https://fedorahosted.org/python-pytest-sourceorder/report/3
-  * Code browser: ​https://git.fedorahosted.org/cgit/python-pytest-sourceorder
-  * git clone ​https://git.fedorahosted.org/git/python-pytest-sourceorder.git
+  * Code browser: https://git.fedorahosted.org/cgit/python-pytest-sourceorder
+  * git clone https://git.fedorahosted.org/git/python-pytest-sourceorder.git
   * Unstable packages for Fedora: https://copr.fedoraproject.org/coprs/pviktori/pytest-plugins/
 
 To release, update version in setup.py, add a Git tag like "v0.3",

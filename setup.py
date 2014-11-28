@@ -27,10 +27,10 @@ setup_args = dict(
         'Programming Language :: Python :: 2.7',
         'Topic :: Software Development :: Quality Assurance',
     ],
-    install_requires=['pytest'],  # (paramiko & PyYAML are suggested)
+    install_requires=['pytest'],
     entry_points = {
         'pytest11': [
-            'sourceorder = pytest_sourceorder.plugin',
+            'sourceorder = pytest_sourceorder',
         ],
     },
 )
