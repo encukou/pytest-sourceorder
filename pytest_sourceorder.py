@@ -59,12 +59,12 @@ def decorate_items(items):
                             # in the inheritance chain, position of the method
                             # within that class)
                             key = (node_index, 0,
-                                   i, method.func_code.co_firstlineno, node)
+                                   i, method.__code__.co_firstlineno, node)
                             break
                 else:
                     # Weird case fallback
                     # Method name not in any of the classes in MRO, run it last
-                    key = node_index, 1, func.func_code.co_firstlineno, node
+                    key = node_index, 1, func.__code__.co_firstlineno, node
                 break
         yield key, item
 
