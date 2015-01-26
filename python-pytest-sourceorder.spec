@@ -12,12 +12,12 @@
 
 %global srcname pytest-sourceorder
 %global modulename pytest_sourceorder
-%global srcversion 0.1
+%global srcversion 0.4
 %global versionedname %{srcname}-%{srcversion}
 
 Name: python-%{srcname}
 Version: %{srcversion}
-Release: 2%{?dist}
+Release: 1%{?dist}
 Summary: Test-ordering plugin for pytest
 
 License: GPLv3+
@@ -124,8 +124,9 @@ popd
 
 
 %changelog
-* Mon Jan 26 2015 Petr Viktorin <encukou@gmail.com> - 0.3-2
-- Run tests
+* Mon Jan 26 2015 Petr Viktorin <encukou@gmail.com> - 0.4-1
+- Improve Python 3 compatibility
+- Run tests in the check step
 - Install COPYING as a license
 
 * Wed Nov 26 2014 Petr Viktorin <encukou@gmail.com> - 0.3-1

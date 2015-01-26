@@ -11,7 +11,7 @@ with io.open('README.rst', 'rt', encoding='utf-8') as f:
 
 setup_args = dict(
     name = "pytest-sourceorder",
-    version = "0.1",
+    version = "0.4",
     description = "Test-ordering plugin for pytest",
     long_description = readme_contents,
     url = "https://fedorahosted.org/python-pytest-sourceorder/",
