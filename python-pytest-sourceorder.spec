@@ -17,7 +17,7 @@
 
 Name: python-%{srcname}
 Version: %{srcversion}
-Release: 1%{?dist}
+Release: 2%{?dist}
 Summary: Test-ordering plugin for pytest
 
 License: GPLv3+
@@ -108,7 +108,7 @@ popd
 %endif
 
 %files
-%doc COPYING
+%license COPYING
 %doc README.rst
 %{python_sitelib}/%{modulename}-%{version}-py2.?.egg-info
 %{python_sitelib}/%{modulename}.py*
@@ -124,6 +124,9 @@ popd
 
 
 %changelog
+* Tue Jan 27 2015 Petr Viktorin <encukou@gmail.com> - 0.4-2
+- Also install COPYING as a license on the Python 3 version
+
 * Mon Jan 26 2015 Petr Viktorin <encukou@gmail.com> - 0.4-1
 - Improve Python 3 compatibility
 - Run tests in the check step
