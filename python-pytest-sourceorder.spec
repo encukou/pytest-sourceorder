@@ -17,7 +17,7 @@
 
 Name: python-%{srcname}
 Version: %{srcversion}
-Release: 2%{?dist}
+Release: 3%{?dist}
 Summary: Test-ordering plugin for pytest
 
 License: GPLv3+
@@ -108,7 +108,11 @@ popd
 %endif
 
 %files
+%if 0%{?rhel} < 7
+%doc COPYING
+%else
 %license COPYING
+%endif
 %doc README.rst
 %{python_sitelib}/%{modulename}-%{version}-py2.?.egg-info
 %{python_sitelib}/%{modulename}.py*
@@ -124,6 +128,9 @@ popd
 
 
 %changelog
+* Mon Mar 2 2015 Petr Viktorin <encukou@gmail.com> - 0.4-3
+- Don't use licence macro on RHEL 6
+
 * Tue Jan 27 2015 Petr Viktorin <encukou@gmail.com> - 0.4-2
 - Also install COPYING as a license on the Python 3 version
 
