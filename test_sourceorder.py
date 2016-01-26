@@ -30,9 +30,14 @@ class TestChild(TestBase):
         assert log == [1, 2, 3]
         log.append(4)
 
+    @pytest.mark.parametrize('number', (5, 6, 7))
+    def test_b_parametrized(self, log, number):
+        assert log[-1] == number - 1
+        log.append(number)
+
     def test_a_fourth(self, log):
-        assert log == [1, 2, 3, 4]
-        log.append(5)
+        assert log == [1, 2, 3, 4, 5, 6, 7]
+        log.append(8)
 
 
 def test_c_second(self, log):
@@ -40,3 +45,19 @@ def test_c_second(self, log):
     log.append(3)
 TestBase.test_c_second = test_c_second
 del test_c_second
+
+
+@ordered
+class TestUnrelated(object):
+    def test_a(self):
+        pass
+
+    def test_b(self):
+        pass
+
+    def test_nose_generator(self):
+        for i in range(2):
+            yield (lambda x: i, i)
+
+def test_unrelated():
+    pass
