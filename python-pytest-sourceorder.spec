@@ -12,12 +12,12 @@
 
 %global srcname pytest-sourceorder
 %global modulename pytest_sourceorder
-%global srcversion 0.4
+%global srcversion 0.5
 %global versionedname %{srcname}-%{srcversion}
 
 Name: python-%{srcname}
 Version: %{srcversion}
-Release: 3%{?dist}
+Release: 1%{?dist}
 Summary: Test-ordering plugin for pytest
 
 License: GPLv3+
@@ -123,11 +123,14 @@ popd
 %doc README.rst
 %{python3_sitelib}/%{modulename}-%{version}-py%{python3_version}.egg-info
 %{python3_sitelib}/%{modulename}.py
-%{python3_sitelib}/__pycache__/%{modulename}.cpython-3?.py*
+%{python3_sitelib}/__pycache__/%{modulename}.cpython-3*.py*
 %endif
 
 
 %changelog
+* Mon Mar 2 2015 Petr Viktorin <encukou@gmail.com> - 0.5-1
+- Add support for parametrized tests under Python 3
+
 * Mon Mar 2 2015 Petr Viktorin <encukou@gmail.com> - 0.4-3
 - Don't use licence macro on RHEL 6
 
