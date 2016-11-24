@@ -4,14 +4,14 @@ A pytest plugin for ensuring tests within a class are run in source order.
 Downloading
 -----------
 
-Release tarballs will be made available for download from Fedora Hosted:
-    https://fedorahosted.org/released/python-pytest-sourceorder/
-
-The goal is to include this project in Fedora repositories. Until that happens,
-you can use testing builds from COPR – see "Developer links" below.
+Release tarballs will be made available for download from Pagure Releases:
+    https://pagure.io/releases/python-pytest-sourceorder/
 
 You can also install using pip:
     https://pypi.python.org/pypi/pytest-sourceorder
+
+The plugin is also available in Fedora repositories as
+``python3-pytest-sourceorder``.
 
 
 Usage
@@ -34,19 +34,16 @@ Contributing
 ------------
 
 The project is happy to accept patches!
-Please format your contribution using the FreeIPA `patch guidelines`_,
-and send it to <freeipa-devel@redhat.com>.
-Any development discussion is welcome there.
-
-Someday the project might get its own list, but that seems premature now.
+Please file any patches as Pull Requests on the project's `Pagure repo`_.
+Any development discussion should be in Pagure Pull Requests and Issues.
 
 
 Developer links
 ---------------
 
-  * Bug tracker: https://fedorahosted.org/python-pytest-sourceorder/report/3
-  * Code browser: https://git.fedorahosted.org/cgit/python-pytest-sourceorder
-  * git clone https://git.fedorahosted.org/git/python-pytest-sourceorder.git
+  * Bug tracker: https://pagure.io/python-pytest-sourceorder/issues
+  * Code browser: https://pagure.io/python-pytest-sourceorder/tree/master
+  * git clone https://pagure.io/python-pytest-sourceorder.git
   * Unstable packages for Fedora: https://copr.fedoraproject.org/coprs/pviktori/pytest-plugins/
 
 To release, update version in setup.py, add a Git tag like "v0.3",
@@ -55,4 +52,4 @@ Running `make upload` will put the tarball to Fedora Hosted and PyPI,
 and a SRPM on Fedorapeople, if you have the rights.
 Running `make release` will upload and fire a COPR build.
 
-.. _patch guidelines: http://www.freeipa.org/page/Contribute/Patch_Format
+.. _Pagure repo: https://pagure.io/python-pytest-sourceorder
