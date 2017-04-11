@@ -12,7 +12,7 @@
 
 %global srcname pytest-sourceorder
 %global modulename pytest_sourceorder
-%global srcversion 0.5
+%global srcversion 0.5.1
 %global versionedname %{srcname}-%{srcversion}
 
 Name: python-%{srcname}
@@ -128,6 +128,9 @@ popd
 
 
 %changelog
+* Mon Mar 2 2015 Petr Viktorin <encukou@gmail.com> - 0.5.1-1
+- Upstream packaging changes
+
 * Mon Mar 2 2015 Petr Viktorin <encukou@gmail.com> - 0.5-1
 - Add support for parametrized tests under Python 3
 

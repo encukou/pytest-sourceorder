@@ -11,7 +11,7 @@ with io.open('README.rst', 'rt', encoding='utf-8') as f:
 
 setup_args = dict(
     name = "pytest-sourceorder",
-    version = "0.5",
+    version = "0.5.1",
     description = "Test-ordering plugin for pytest",
     long_description = readme_contents,
     url = "https://pagure.io/python-pytest-sourceorder",
