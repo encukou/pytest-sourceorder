@@ -10,12 +10,21 @@ in a specific order:
 - Within a class, test methods are ordered according to source line
 """
 
+import functools
+
 import pytest
 from pytest_sourceorder import ordered
 
 @pytest.fixture(scope='class')
 def log():
     return [1]
+
+
+def decorator(test_method):
+    @functools.wraps(test_method)
+    def wrapper(instance, *args, **kwargs):
+        test_method(instance, *args, **kwargs)
+    return wrapper
 
 
 @ordered
@@ -38,6 +47,11 @@ class TestChild(TestBase):
     def test_a_fourth(self, log):
         assert log == [1, 2, 3, 4, 5, 6, 7]
         log.append(8)
+
+    @decorator
+    def test_decorated(self, log):
+        assert log == [1, 2, 3, 4, 5, 6, 7, 8]
+        log.append(9)
 
 
 def test_c_second(self, log):

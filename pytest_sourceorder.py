@@ -32,6 +32,12 @@ def ordered(cls):
     return cls
 
 
+def unwrap_method(method):
+    while hasattr(method, '__wrapped__'):
+        method = method.__wrapped__
+    return method
+
+
 def decorate_items(items):
     node_indexes = {}
     for index, item in enumerate(items):
@@ -55,6 +61,7 @@ def decorate_items(items):
                     if getattr(parent_class, '_order_plugin__ordered', False):
                         method = getattr(parent_class, func.__name__, None)
                         if method:
+                            method = unwrap_method(method)
                             # Sort methods as tuples  (position of the class
                             # in the inheritance chain, position of the method
                             # within that class)
