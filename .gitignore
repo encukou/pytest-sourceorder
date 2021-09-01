@@ -4,3 +4,4 @@
 /*.egg-info/
 /rpmbuild/
 /pytest-sourceorder-*.tar.gz
+/.tox/
