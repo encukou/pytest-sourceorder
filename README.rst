@@ -46,10 +46,4 @@ Developer links
   * git clone https://pagure.io/python-pytest-sourceorder.git
   * Unstable packages for Fedora: https://copr.fedoraproject.org/coprs/pviktori/pytest-plugins/
 
-To release, update version in setup.py, add a Git tag like "v0.3",
-and run `make tarball`.
-Running `make upload` will put the tarball to Fedora Hosted and PyPI,
-and a SRPM on Fedorapeople, if you have the rights.
-Running `make release` will upload and fire a COPR build.
-
 .. _Pagure repo: https://pagure.io/python-pytest-sourceorder
