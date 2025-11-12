@@ -69,9 +69,5 @@ class TestUnrelated(object):
     def test_b(self):
         pass
 
-    def test_nose_generator(self):
-        for i in range(2):
-            yield (lambda x: i, i)
-
 def test_unrelated():
     pass
